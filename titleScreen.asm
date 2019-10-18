@@ -28,14 +28,14 @@ TitleSequence
 ;                sta rndHi
 ;                sta rnd
 
-
+#if 0
                 lda #0
                 sta digit
                 lda #$10
                 sta digit+1
                 lda #$20
                 sta digit+2
-
+#endif
 
 
 
@@ -56,7 +56,7 @@ finxc
 #endif
 
     DEFINE_SUBROUTINE RestartFrame
-                LDA #0
+;                LDA #0
                 lda #%1110                       ; VSYNC ON
 .loopVSync2     sta WSYNC
                 sta VSYNC
